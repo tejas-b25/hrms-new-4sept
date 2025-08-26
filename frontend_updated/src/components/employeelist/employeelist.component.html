@@ -1,0 +1,70 @@
+<div>
+     <h3>All Employee</h3>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Employee Code</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Contact Number</th>
+        <th>Emergency Contact</th>
+        <th>Address</th>
+        <th>Joining Date</th>
+        <th>Probation End</th>
+        <th>Status</th>
+        <th>Department</th>
+        <th>Manager</th>
+        <th>Designation</th>
+        <th>Job Type</th>
+        <th>Job Location</th>
+        <th>Education </th>
+        <th>Experiance</th>
+        <th>Certificates</th>
+        <th>Bank</th>
+        <th *ngIf="canModify()">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeelist">
+        <td>{{ emp.employeeId }}</td>
+        <td>{{emp.employyeCode}}</td>
+        <td>{{emp.firstName}} {{emp.lastName}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.contact}} </td>
+        <td>{{emp.emergencyCon}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.joiningDate}} </td>
+        <td>{{emp.probationEnd}} </td>
+        <td>{{emp.status}}</td>
+        <td>{{emp.departmentId}}</td>
+        <td>{{ emp.manager ? emp.manager.firstName + ' ' + emp.manager.lastName : 'N/A' }}</td>
+        <td>{{emp.designation}}</td>
+        <td>{{emp.jobType}}</td>
+        <td>{{emp.location}}</td>
+        <td>{{emp.education}} </td>
+        <td>{{emp.experiance}}</td>
+        <td>{{emp.certificates}}</td>
+       <td>
+  <button class="btn btn-link p-0" (click)="toggleBankDetails(emp.employeeId)">
+    {{ isBankExpanded(emp.employeeId) ? 'Hide' : 'View' }}
+  </button>
+  </td>
+  <td *ngIf="isBankExpanded(emp.employeeId)" colspan="6">
+  <div class="card p-3">
+    <strong>Account Holder:</strong> {{ emp.bankDetails?.accountHolderName || 'N/A' }}<br />
+    <strong>Bank Name:</strong> {{ emp.bankDetails?.bankName || 'N/A' }}<br />
+    <strong>Account Number:</strong> {{ emp.bankDetails?.accountNumber || 'N/A' }}<br />
+    <strong>IFSC Code:</strong> {{ emp.bankDetails?.ifscCode || 'N/A' }}<br />
+    <strong>Branch:</strong> {{ emp.bankDetails?.branch || 'N/A' }}<br />
+    <strong>Account Type:</strong> {{ emp.bankDetails?.accountType || 'N/A' }}
+  </div>
+</td>
+        <td *ngIf="canModify()">
+          <button class="btn btn-sm btn-info" (click)="editEmployeeList(emp)">Edit</button>
+          <button class="btn btn-sm btn-danger ms-2" (click)="deleteEmployee(emp.employeeId!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,63 @@
+.form-container {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  background: #f9f9f9;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+}
+ 
+.form-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 15px;
+
+}
+ 
+input, select, textarea {
+
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+}
+ 
+button {
+
+  margin-top: 20px;
+
+  padding: 10px 25px;
+
+  background: #007bff;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+}
+ 
+button:disabled {
+
+  background-color: #cccccc;
+
+  cursor: not-allowed;
+
+}
+
+ 

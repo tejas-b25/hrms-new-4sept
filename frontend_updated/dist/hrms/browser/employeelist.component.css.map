@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/components/employeelist/employeelist.component.css"],
+  "sourcesContent": [".form-container {\r\n\r\n  max-width: 1200px;\r\n\r\n  margin: auto;\r\n\r\n  background: #f9f9f9;\r\n\r\n  padding: 20px;\r\n\r\n  border-radius: 10px;\r\n\r\n}\r\n \r\n.form-grid {\r\n\r\n  display: grid;\r\n\r\n  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));\r\n\r\n  gap: 15px;\r\n\r\n}\r\n \r\ninput, select, textarea {\r\n\r\n  width: 100%;\r\n\r\n  padding: 10px;\r\n\r\n  border: 1px solid #ccc;\r\n\r\n  border-radius: 8px;\r\n\r\n}\r\n \r\nbutton {\r\n\r\n  margin-top: 20px;\r\n\r\n  padding: 10px 25px;\r\n\r\n  background: #007bff;\r\n\r\n  color: white;\r\n\r\n  border: none;\r\n\r\n  border-radius: 8px;\r\n\r\n  cursor: pointer;\r\n\r\n}\r\n \r\nbutton:disabled {\r\n\r\n  background-color: #cccccc;\r\n\r\n  cursor: not-allowed;\r\n\r\n}\r\n\r\n "],
+  "mappings": ";AAAA,CAAC;AAEC,aAAW;AAEX,UAAQ;AAER,cAAY;AAEZ,WAAS;AAET,iBAAe;AAEjB;AAEA,CAAC;AAEC,WAAS;AAET,yBAAuB,OAAO,QAAQ,EAAE,OAAO,KAAK,EAAE;AAEtD,OAAK;AAEP;AAEA;AAAO;AAAQ;AAEb,SAAO;AAEP,WAAS;AAET,UAAQ,IAAI,MAAM;AAElB,iBAAe;AAEjB;AAEA;AAEE,cAAY;AAEZ,WAAS,KAAK;AAEd,cAAY;AAEZ,SAAO;AAEP,UAAQ;AAER,iBAAe;AAEf,UAAQ;AAEV;AAEA,MAAM;AAEJ,oBAAkB;AAElB,UAAQ;AAEV;",
+  "names": []
+}

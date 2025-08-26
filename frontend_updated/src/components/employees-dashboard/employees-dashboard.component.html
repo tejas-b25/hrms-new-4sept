@@ -1,0 +1,160 @@
+<div class="container-fluid">
+  <app-employee-sidebar></app-employee-sidebar>
+
+  <!-- Username Header with Hover Dropdown -->
+  <div class="d-flex justify-content-end align-items-center pe-4 pt-3 position-relative profile-dropdown">
+    <div class="dropdown">
+      <a class="d-flex align-items-center text-decoration-none" href="#">
+        <span class="fw-bold text-capitalize me-2">{{ username }}</span>
+        <i class="fas fa-user-circle fa-lg text-primary"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item text-danger" href="#" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-3">
+    <h1 class="h3 mb-0 text-gray-800">Employee Dashboard</h1>
+  </div>
+
+  <!-- Attendance Management Section -->
+  <div class="container mb-4">
+    <h2>Attendance Management</h2>
+
+    <!-- Clock In Form -->
+    <form [formGroup]="clockInForm" (ngSubmit)="clockIn()" class="mb-3">
+      <label>Working From:
+        <select formControlName="workFrom">
+          <option value="">Select</option>
+          <option value="OFFICE">OFFICE</option>
+          <option value="REMOTE">REMOTE</option>
+        </select>
+      </label>
+      <br /><br />
+
+      <label>Mode:
+        <select formControlName="mode">
+          <option value="">Select</option>
+          <option value="WEB">WEB</option>
+          <option value="MOBILE">MOBILE</option>
+          <option value="BIOMETRIC">BIOMETRIC</option>
+        </select>
+      </label>
+      <br /><br />
+
+      <label>Location:
+        <input type="text" formControlName="location" placeholder="Enter your city" autocomplete="off" />
+      </label>
+      <br /><br />
+
+      <button type="submit" [disabled]="clockInForm.invalid">Clock In</button>
+    </form>
+
+    <!-- Clock Out Form -->
+    <form [formGroup]="clockOutForm" (ngSubmit)="clockOutAttendance()" class="mb-3">
+      <button type="submit">Clock Out</button>
+    </form>
+
+    <hr />
+
+    <!-- Regularize Attendance Form -->
+    <form [formGroup]="regularizeForm" (ngSubmit)="submitRegularization()">
+      <h3>Regularize Attendance</h3>
+
+      <label>Date:
+        <input type="date" formControlName="date" />
+      </label>
+      <br /><br />
+
+      <label>Reason:
+        <input type="text" formControlName="reason" />
+      </label>
+      <br /><br />
+
+      <button type="submit" [disabled]="regularizeForm.invalid">Request Regularization</button>
+    </form>
+
+    <p-toast></p-toast>
+  </div>
+
+  <!-- Employee Metrics Section -->
+  <div class="row">
+    <div class="col-md-3 mb-4" *ngFor="let leave of leaveBalance">
+      <div class="card shadow metric-card">
+        <div class="card-body">
+          <h5 class="metric-title">{{ leave.type }}</h5>
+          <div class="metric-value">{{ leave.total - leave.used }}/{{ leave.total }}</div>
+          <small>Used: {{ leave.used }}</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card shadow metric-card">
+        <div class="card-body">
+          <h5 class="metric-title">Attendance</h5>
+          <div>Present: {{attendance.daysPresent}}</div>
+          <div>Absent: {{attendance.daysAbsent}}</div>
+          <div>WFH: {{attendance.workFromHome}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card shadow metric-card">
+        <div class="card-body">
+          <h5 class="metric-title">Next Payroll</h5>
+          <div class="metric-value">{{ payrollDate | date:'mediumDate' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card shadow metric-card">
+        <div class="card-body">
+          <h5 class="metric-title">Upcoming Holidays</h5>
+          <ul class="list-unstyled small">
+            <li *ngFor="let holiday of holidays">{{holiday.name}} - {{holiday.date | date:'MMM d'}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leave History Table -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Leave History</h6>
+    </div>
+    <div class="card-body table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Leave Type</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let leave of leaveHistory">
+            <td>{{leave.type}}</td>
+            <td>{{leave.from}}</td>
+            <td>{{leave.to}}</td>
+            <td>
+              <span class="badge"
+                    [ngClass]="{
+                      'badge-success': leave.status === 'Approved',
+                      'badge-warning': leave.status === 'Pending',
+                      'badge-danger': leave.status === 'Rejected'
+                    }">
+                {{leave.status}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

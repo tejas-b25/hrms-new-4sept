@@ -1,0 +1,174 @@
+<div class="container-fluid">
+  <app-finance-sidebar></app-finance-sidebar>
+
+  <!-- Username Header with Hover Dropdown -->
+  <div class="d-flex justify-content-end align-items-center mt-2 pe-4 position-relative profile-dropdown">
+    <div class="dropdown">
+      <a class="d-flex align-items-center text-decoration-none" href="#">
+        <i class="fas fa-user-circle fa-lg me-2 text-primary"></i>
+        <span class="fw-bold text-capitalize">{{ username }}</span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <!-- <li><a class="dropdown-item" href="finance-dashboard">Profile</a></li>
+        <li><hr class="dropdown-divider"></li> -->
+        <li><a class="dropdown-item text-danger" href="#" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Finance Dashboard</h1>
+    <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+      <i class="fas fa-download fa-sm text-white-50"></i> Generate Report
+    </a> -->
+  </div>
+  <div class="container">
+  <h2>Attendance Management</h2>
+
+  <!-- Clock In Form -->
+  <form [formGroup]="clockInForm" (ngSubmit)="clockIn()">
+    <label>Working From:
+      <select formControlName="workFrom">
+        <option value="">Select</option>
+        <option value="OFFICE">OFFICE</option>
+        <option value="REMOTE">REMOTE</option>
+      </select>
+    </label>
+    <br /><br />
+
+    <label>Mode:
+      <select formControlName="mode">
+        <option value="">Select</option>
+        <option value="WEB">WEB</option>
+        <option value="MOBILE">MOBILE</option>
+        <option value="BIOMETRIC">BIOMETRIC</option>
+      </select>
+    </label>
+    <br /><br />
+
+    <label>Location:
+      <input type="text" formControlName="location" placeholder="Enter your city" autocomplete="off" />
+    </label>
+    <br /><br />
+
+    <button type="submit" [disabled]="clockInForm.invalid">Clock In</button>
+  </form>
+
+  <!-- Clock Out Form -->
+  <form [formGroup]="clockOutForm" (ngSubmit)="clockOutAttendance()" class="mt-2">
+    <button type="submit">Clock Out</button>
+  </form>
+
+  <hr />
+
+  <!-- Regularize Attendance Form -->
+  <form [formGroup]="regularizeForm" (ngSubmit)="submitRegularization()">
+    <h3>Regularize Attendance</h3>
+
+    <label>Date:
+      <input type="date" formControlName="date" />
+    </label>
+    <br /><br />
+
+    <label>Reason:
+      <input type="text" formControlName="reason" />
+    </label>
+    <br /><br />
+
+    <button type="submit" [disabled]="regularizeForm.invalid">Request Regularization</button>
+  </form>
+
+  <p-toast></p-toast>
+</div>
+
+<!-- 
+  <div class="row">
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="metric-card primary-metric animated-card">
+        <div class="metric-title">Total Revenue</div>
+        <div class="metric-value">₹{{totalRevenue | number}}</div>
+        <i class="fas fa-rupee-sign metric-icon"></i>
+      </div>
+    </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="metric-card danger-metric animated-card">
+        <div class="metric-title">Total Expenses</div>
+        <div class="metric-value">₹{{totalExpenses | number}}</div>
+        <i class="fas fa-wallet metric-icon"></i>
+      </div>
+    </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="metric-card success-metric animated-card">
+        <div class="metric-title">Profit Margin</div>
+        <div class="metric-value">{{profitMargin}}%</div>
+        <i class="fas fa-percentage metric-icon"></i>
+      </div>
+    </div>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="metric-card warning-metric animated-card">
+        <div class="metric-title">Pending Invoices</div>
+        <div class="metric-value">{{pendingInvoices}}</div>
+        <i class="fas fa-file-invoice-dollar metric-icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    Budget vs Actual
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Budget vs Actual</h6>
+        </div>
+        <div class="card-body">
+          <canvas baseChart 
+            [data]="budgetChartData"
+            [options]="budgetChartOptions"
+            type="bar">
+          </canvas>
+        </div>
+      </div>
+    </div>
+
+    Expense Breakdown
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Expense Breakdown</h6>
+        </div>
+        <div class="card-body">
+          <canvas baseChart 
+            [data]="expenseChartData"
+            [options]="expenseChartOptions"
+            type="doughnut">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  Upcoming Payments
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Upcoming Payments</h6>
+    </div>
+    <div class="card-body table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Vendor</th>
+            <th>Amount (₹)</th>
+            <th>Due Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let payment of upcomingPayments">
+            <td>{{payment.vendor}}</td>
+            <td>{{payment.amount | number}}</td>
+            <td>{{payment.dueDate | date:'mediumDate'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->
+</div>
