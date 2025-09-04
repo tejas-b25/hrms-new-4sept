@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/components/quick-actions/quick-actions.component.css"],
+  "sourcesContent": [".btn-block {\r\n  display: block;\r\n  width: 100%;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,WAAS;AACT,SAAO;AACT;",
+  "names": []
+}

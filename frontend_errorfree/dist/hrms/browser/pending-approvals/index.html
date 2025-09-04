@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>HRMS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- In index.html head section -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/themes/lara-light-blue/theme.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/primeng.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeicons@8.0.0/primeicons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.badge[_ngcontent-ng-c1613507957] {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+/*# sourceMappingURL=pending-approvals.component.css.map */</style><style ng-app-id="ng">@layer primeng{.p-datatable{position:relative}.p-datatable>.p-datatable-wrapper{overflow:auto}.p-datatable-table{border-spacing:0px;width:100%}.p-datatable .p-sortable-column{cursor:pointer;-webkit-user-select:none;user-select:none}.p-datatable .p-sortable-column .p-column-title,.p-datatable .p-sortable-column .p-sortable-column-icon,.p-datatable .p-sortable-column .p-sortable-column-badge{vertical-align:middle}.p-datatable .p-sortable-column .p-icon-wrapper{display:inline}.p-datatable .p-sortable-column .p-sortable-column-badge{display:inline-flex;align-items:center;justify-content:center}.p-datatable-hoverable-rows .p-selectable-row{cursor:pointer}.p-datatable-scrollable>.p-datatable-wrapper{position:relative}.p-datatable-scrollable-table>.p-datatable-thead{position:sticky;top:0;z-index:2}.p-datatable-scrollable-table>.p-datatable-frozen-tbody{position:sticky;z-index:1}.p-datatable-scrollable-table>.p-datatable-tfoot{position:sticky;bottom:0;z-index:1}.p-datatable-scrollable .p-frozen-column{position:sticky;background:inherit;z-index:1}.p-datatable-scrollable th.p-frozen-column{z-index:1}.p-datatable-flex-scrollable{display:flex;flex-direction:column;height:100%}.p-datatable-flex-scrollable>.p-datatable-wrapper{display:flex;flex-direction:column;flex:1;height:100%}.p-datatable-scrollable-table>.p-datatable-tbody>.p-rowgroup-header{position:sticky;z-index:2}.p-datatable-resizable-table>.p-datatable-thead>tr>th,.p-datatable-resizable-table>.p-datatable-tfoot>tr>td,.p-datatable-resizable-table>.p-datatable-tbody>tr>td{overflow:hidden;white-space:nowrap}.p-datatable-resizable-table>.p-datatable-thead>tr>th.p-resizable-column:not(.p-frozen-column){background-clip:padding-box;position:relative}.p-datatable-resizable-table-fit>.p-datatable-thead>tr>th.p-resizable-column:last-child .p-column-resizer{display:none}.p-datatable .p-column-resizer{display:block;position:absolute!important;top:0;right:0;margin:0;width:.5rem;height:100%;padding:0;cursor:col-resize;border:1px solid transparent}.p-datatable .p-column-resizer-helper{width:1px;position:absolute;z-index:10;display:none}.p-datatable .p-row-editor-init,.p-datatable .p-row-editor-save,.p-datatable .p-row-editor-cancel,.p-datatable .p-row-toggler{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-datatable-reorder-indicator-up,.p-datatable-reorder-indicator-down{position:absolute}.p-datatable-reorderablerow-handle,[pReorderableColumn]{cursor:move}.p-datatable .p-datatable-loading-overlay{position:absolute;display:flex;align-items:center;justify-content:center;z-index:3}.p-column-filter-row{display:flex;align-items:center;width:100%}.p-column-filter-menu{display:inline-flex}.p-column-filter-row p-columnfilterformelement{flex:1 1 auto;width:1%}.p-column-filter-menu-button,.p-column-filter-clear-button{display:inline-flex;justify-content:center;align-items:center;cursor:pointer;text-decoration:none;overflow:hidden;position:relative}.p-column-filter-overlay{position:absolute;top:0;left:0}.p-column-filter-row-items{margin:0;padding:0;list-style:none}.p-column-filter-row-item{cursor:pointer}.p-column-filter-add-button,.p-column-filter-remove-button{justify-content:center}.p-column-filter-add-button .p-button-label,.p-column-filter-remove-button .p-button-label{flex-grow:0}.p-column-filter-buttonbar{display:flex;align-items:center;justify-content:space-between}.p-column-filter-buttonbar .p-button{width:auto}.p-datatable-tbody>tr>td>.p-column-title{display:none}.p-datatable-scroller-spacer{display:flex}.p-datatable .p-scroller .p-scroller-loading{transform:none!important;min-height:0;position:sticky;top:0;left:0}}
+</style><style ng-app-id="ng">@layer primeng{.p-toast{position:fixed;width:25rem}.p-toast-message{overflow:hidden}.p-toast-message-content{display:flex;align-items:flex-start}.p-toast-message-text{flex:1 1 auto}.p-toast-top-right{top:20px;right:20px}.p-toast-top-left{top:20px;left:20px}.p-toast-bottom-left{bottom:20px;left:20px}.p-toast-bottom-right{bottom:20px;right:20px}.p-toast-top-center{top:20px;left:50%;transform:translate(-50%)}.p-toast-bottom-center{bottom:20px;left:50%;transform:translate(-50%)}.p-toast-center{left:50%;top:50%;min-width:20vw;transform:translate(-50%,-50%)}.p-toast-icon-close{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;flex:none}.p-toast-icon-close.p-link{cursor:pointer}}
+</style></head>
+<body class="mat-typography"><!--nghm-->
+  <app-root _nghost-ng-c3983809038="" ng-version="17.3.12" ngh="4" ng-server-context="ssg"><router-outlet _ngcontent-ng-c3983809038=""></router-outlet><app-pending-approvals _nghost-ng-c1613507957="" class="ng-star-inserted" ngh="3"><div _ngcontent-ng-c1613507957="" class="card shadow mb-4"><div _ngcontent-ng-c1613507957="" class="card-header py-3 d-flex flex-row align-items-center justify-content-between"><h6 _ngcontent-ng-c1613507957="" class="m-0 font-weight-bold text-primary">Pending Approvals</h6><div _ngcontent-ng-c1613507957="" class="dropdown no-arrow"><a _ngcontent-ng-c1613507957="" href="#" role="button" data-bs-toggle="dropdown" class="dropdown-toggle"><i _ngcontent-ng-c1613507957="" class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i></a><ul _ngcontent-ng-c1613507957="" class="dropdown-menu dropdown-menu-end shadow"><li _ngcontent-ng-c1613507957=""><a _ngcontent-ng-c1613507957="" href="#" class="dropdown-item">View All</a></li><li _ngcontent-ng-c1613507957=""><a _ngcontent-ng-c1613507957="" href="#" class="dropdown-item">Settings</a></li></ul></div></div><div _ngcontent-ng-c1613507957="" class="card-body"><div _ngcontent-ng-c1613507957="" class="table-responsive"><p-table _ngcontent-ng-c1613507957="" class="p-element" ng-reflect-value="[object Object],[object Object" ng-reflect-responsive="true" ngh="1"><div ng-reflect-ng-class="[object Object]" id="pn_id_5" class="p-datatable p-component"><!--bindings={}--><!--bindings={}--><!--bindings={}--><div class="p-datatable-wrapper" ng-reflect-ng-style="[object Object]"><!--bindings={}--><table role="table" ng-reflect-ng-class="[object Object]" id="pn_id_5-table" class="p-datatable-table ng-star-inserted"><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><thead role="rowgroup" class="p-datatable-thead"><tr _ngcontent-ng-c1613507957="" class="ng-star-inserted"><th _ngcontent-ng-c1613507957="">Type</th><th _ngcontent-ng-c1613507957="">Employee</th><th _ngcontent-ng-c1613507957="">Details</th><th _ngcontent-ng-c1613507957="">Date</th><th _ngcontent-ng-c1613507957="">Status</th><th _ngcontent-ng-c1613507957="">Action</th></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--></thead><!--bindings={}--><tbody role="rowgroup" class="p-element p-datatable-tbody" ng-reflect-value="[object Object],[object Object" ng-reflect-template="[object Object]" ng-reflect-scroller-options="[object Object]" ngh="0"><!--bindings={}--><tr _ngcontent-ng-c1613507957="" class="ng-star-inserted"><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-warning text-dark">Leave</span></td><td _ngcontent-ng-c1613507957="">John Doe</td><td _ngcontent-ng-c1613507957="">Sick Leave - 3 days</td><td _ngcontent-ng-c1613507957="">Jun 5-7, 2023</td><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-info">Pending</span></td><td _ngcontent-ng-c1613507957=""><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-check" class="p-button-success p-button-sm ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-times" class="p-button-danger p-button-sm ms-1 ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-ng-c1613507957="" class="ng-star-inserted"><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-primary">Expense</span></td><td _ngcontent-ng-c1613507957="">Sarah Smith</td><td _ngcontent-ng-c1613507957="">Travel Reimbursement - $250</td><td _ngcontent-ng-c1613507957="">May 28, 2023</td><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-info">Pending</span></td><td _ngcontent-ng-c1613507957=""><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-check" class="p-button-success p-button-sm ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-times" class="p-button-danger p-button-sm ms-1 ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-ng-c1613507957="" class="ng-star-inserted"><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-success">Timesheet</span></td><td _ngcontent-ng-c1613507957="">Mike Johnson</td><td _ngcontent-ng-c1613507957="">Week 22 - 45 hours</td><td _ngcontent-ng-c1613507957="">May 29-Jun 4</td><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-info">Pending</span></td><td _ngcontent-ng-c1613507957=""><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-check" class="p-button-success p-button-sm ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-times" class="p-button-danger p-button-sm ms-1 ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-ng-c1613507957="" class="ng-star-inserted"><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-danger">POSH</span></td><td _ngcontent-ng-c1613507957="">Anonymous</td><td _ngcontent-ng-c1613507957="">Harassment Complaint</td><td _ngcontent-ng-c1613507957="">Jun 1, 2023</td><td _ngcontent-ng-c1613507957=""><span _ngcontent-ng-c1613507957="" class="badge bg-warning">Urgent</span></td><td _ngcontent-ng-c1613507957=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><button _ngcontent-ng-c1613507957="" pbutton="" pripple="" type="button" icon="pi pi-eye" class="p-button-primary p-button-sm ng-star-inserted"></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-for-track-by": "(index2, item) => item"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></tbody><!--bindings={}--><!--bindings={}--></table><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--container--></div><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={}--></div></p-table></div></div></div><p-toast _ngcontent-ng-c1613507957="" class="p-element ng-tns-c1067615279-0 ng-star-inserted" ngh="2"><div class="p-toast p-component ng-tns-c1067615279-0 p-toast-top-right" ng-reflect-ng-class="p-toast-top-right"><!--bindings={}--></div></p-toast></app-pending-approvals><!--container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-root>
+  
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t30","1":"t41","2":"t42","3":"t43","4":"t44"},"c":{"0":[{"i":"t30","r":30,"e":{"0":29},"t":{"1":"t31"},"c":{"1":[{"i":"t31","r":7,"t":{"0":"t32","1":"t33","2":"t39","3":"t40"},"c":{"0":[],"1":[{"i":"t33","r":3,"e":{"0":2},"t":{"1":"t34"},"c":{"1":[{"i":"t35","r":1,"t":{"14":"t36","15":"t37","16":"t38"},"c":{"14":[{"i":"t36","r":1}],"15":[{"i":"t37","r":1}],"16":[]}}]}}],"2":[],"3":[]},"x":3},{"i":"t31","r":7,"t":{"0":"t32","1":"t33","2":"t39","3":"t40"},"c":{"0":[],"1":[{"i":"t33","r":3,"e":{"0":2},"t":{"1":"t34"},"c":{"1":[{"i":"t35","r":1,"t":{"14":"t36","15":"t37","16":"t38"},"c":{"14":[],"15":[],"16":[{"i":"t38","r":1}]}}]}}],"2":[],"3":[]}}]}}],"1":[],"2":[],"3":[],"4":[]}},{"t":{"2":"t19","3":"t20","4":"t21","7":"t22","8":"t23","9":"t25","11":"t47","12":"t48","13":"t49","14":"t50","15":"t51"},"c":{"2":[],"3":[],"4":[],"7":[],"8":[{"i":"t23","r":3,"e":{"0":2},"t":{"1":"t24"},"c":{"1":[{"i":"t25","r":1,"t":{"2":"t26","5":"t27","6":"t29","8":"t45","9":"t46"},"c":{"2":[],"5":[{"i":"t28","r":1}],"6":[],"8":[],"9":[]}}]}}],"9":[],"11":[],"12":[],"13":[],"14":[],"15":[]}},{"t":{"2":"t3"},"c":{"2":[]}},{"d":[17,18]},{"t":{"0":"t0","1":"t4"},"c":{"0":[{"i":"t0","r":3,"c":{"0":[{"i":"c1613507957","r":1}]}}],"1":[]}}]}</script></body></html>

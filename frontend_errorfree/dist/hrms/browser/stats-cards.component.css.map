@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/components/stats-cards/stats-cards.component.css"],
+  "sourcesContent": [".card {\r\n  border: none;\r\n  border-radius: 0.35rem;\r\n  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);\r\n  margin-bottom: 1.5rem;\r\n}\r\n\r\n.border-left-primary {\r\n  border-left: 0.25rem solid #4e73df !important;\r\n}\r\n\r\n.border-left-success {\r\n  border-left: 0.25rem solid #1cc88a !important;\r\n}\r\n\r\n.border-left-info {\r\n  border-left: 0.25rem solid #36b9cc !important;\r\n}\r\n\r\n.border-left-warning {\r\n  border-left: 0.25rem solid #f6c23e !important;\r\n}\r\n\r\n.text-primary {\r\n  color: #4e73df !important;\r\n}\r\n\r\n.text-success {\r\n  color: #1cc88a !important;\r\n}\r\n\r\n.text-info {\r\n  color: #36b9cc !important;\r\n}\r\n\r\n.text-warning {\r\n  color: #f6c23e !important;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,UAAQ;AACR,iBAAe;AACf,cAAY,EAAE,QAAQ,QAAQ,EAAE,KAAK,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE;AACjD,iBAAe;AACjB;AAEA,CAAC;AACC,eAAa,QAAQ,MAAM;AAC7B;AAEA,CAAC;AACC,eAAa,QAAQ,MAAM;AAC7B;AAEA,CAAC;AACC,eAAa,QAAQ,MAAM;AAC7B;AAEA,CAAC;AACC,eAAa,QAAQ,MAAM;AAC7B;AAEA,CAAC;AACC,SAAO;AACT;AAEA,CAAC;AACC,SAAO;AACT;AAEA,CAAC;AACC,SAAO;AACT;AAEA,CAAC;AACC,SAAO;AACT;",
+  "names": []
+}

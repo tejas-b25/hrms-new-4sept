@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>HRMS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- In index.html head section -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/themes/lara-light-blue/theme.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/primeng.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeicons@8.0.0/primeicons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.button-row[_ngcontent-ng-c2606295882] {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.action-button[_ngcontent-ng-c2606295882] {
+  width: auto;
+  padding: 0.5rem 1.2rem;
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.action-button[_ngcontent-ng-c2606295882]:hover:not(:disabled) {
+  background-color: darkgray;
+}
+.register-button-wrapper[_ngcontent-ng-c2606295882] {
+  display: flex;
+  justify-content: center;
+}
+/*# sourceMappingURL=register.component.css.map */</style><style ng-app-id="ng">@layer primeng{.p-toast{position:fixed;width:25rem}.p-toast-message{overflow:hidden}.p-toast-message-content{display:flex;align-items:flex-start}.p-toast-message-text{flex:1 1 auto}.p-toast-top-right{top:20px;right:20px}.p-toast-top-left{top:20px;left:20px}.p-toast-bottom-left{bottom:20px;left:20px}.p-toast-bottom-right{bottom:20px;right:20px}.p-toast-top-center{top:20px;left:50%;transform:translate(-50%)}.p-toast-bottom-center{bottom:20px;left:50%;transform:translate(-50%)}.p-toast-center{left:50%;top:50%;min-width:20vw;transform:translate(-50%,-50%)}.p-toast-icon-close{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;flex:none}.p-toast-icon-close.p-link{cursor:pointer}}
+</style></head>
+<body class="mat-typography"><!--nghm-->
+  <app-root _nghost-ng-c3983809038="" ng-version="17.3.12" ngh="2" ng-server-context="ssg"><router-outlet _ngcontent-ng-c3983809038=""></router-outlet><app-register _nghost-ng-c2606295882="" class="ng-star-inserted" ngh="1"><p-toast _ngcontent-ng-c2606295882="" class="p-element ng-tns-c1067615279-0 ng-star-inserted" ngh="0"><div class="p-toast p-component ng-tns-c1067615279-0 p-toast-top-right" ng-reflect-ng-class="p-toast-top-right"><!--bindings={}--></div></p-toast><div _ngcontent-ng-c2606295882="" class="button-row"><button _ngcontent-ng-c2606295882="" title="Go Back" class="action-button"> × </button></div><h2 _ngcontent-ng-c2606295882="">Register User</h2><form _ngcontent-ng-c2606295882="" novalidate="" class="ng-untouched ng-pristine ng-star-inserted ng-invalid"><div _ngcontent-ng-c2606295882="" class="mb-3"><label _ngcontent-ng-c2606295882="">Username:</label><input _ngcontent-ng-c2606295882="" type="text" name="username" required="" minlength="5" maxlength="20" placeholder="Enter username (5–20 characters)" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-minlength="5" ng-reflect-maxlength="20" ng-reflect-name="username" ng-reflect-model="" ng-reflect-ng-class="[object Object]" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c2606295882="" class="mb-3"><label _ngcontent-ng-c2606295882="">Email:</label><input _ngcontent-ng-c2606295882="" type="email" name="email" required="" email="" placeholder="Enter valid email address" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-email="" ng-reflect-name="email" ng-reflect-model="" ng-reflect-ng-class="[object Object]" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c2606295882="" class="mb-3"><label _ngcontent-ng-c2606295882="">Role:</label><select _ngcontent-ng-c2606295882="" name="role" required="" class="form-select ng-untouched ng-pristine ng-invalid" ng-reflect-required="" ng-reflect-name="role" ng-reflect-model="" ng-reflect-ng-class="[object Object]"><option _ngcontent-ng-c2606295882="" value="" ng-reflect-value="">Select Role</option><option _ngcontent-ng-c2606295882="" value="HR" ng-reflect-value="HR" class="ng-star-inserted">HR</option><option _ngcontent-ng-c2606295882="" value="MANAGER" ng-reflect-value="MANAGER" class="ng-star-inserted">MANAGER</option><option _ngcontent-ng-c2606295882="" value="FINANCE" ng-reflect-value="FINANCE" class="ng-star-inserted">FINANCE</option><option _ngcontent-ng-c2606295882="" value="EMPLOYEE" ng-reflect-value="EMPLOYEE" class="ng-star-inserted">EMPLOYEE</option><!--bindings={
+  "ng-reflect-ng-for-of": "HR,MANAGER,FINANCE,EMPLOYEE"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><button _ngcontent-ng-c2606295882="" type="submit" class="btn btn-primary" disabled=""> Register </button><!--bindings={
+  "ng-reflect-ng-if": ""
+}--></form><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-register><!--container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-root>
+  
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"2":"t1"},"c":{"2":[]}},{"t":{"6":"t2","7":"t8"},"c":{"6":[{"i":"t2","r":1,"t":{"7":"t3","13":"t4","21":"t5","22":"t6","25":"t7"},"c":{"7":[],"13":[],"21":[{"i":"t5","r":1,"x":4}],"22":[],"25":[]}}],"7":[]}},{"t":{"0":"t0","1":"t9"},"c":{"0":[{"i":"t0","r":3,"c":{"0":[{"i":"c2606295882","r":1}]}}],"1":[]}}]}</script></body></html>

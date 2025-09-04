@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/components/department-chart/department-chart.component.css"],
-  "sourcesContent": [".chart-pie {\r\n  position: relative;\r\n  height: 15rem;\r\n  width: 100%;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,YAAU;AACV,UAAQ;AACR,SAAO;AACT;",
-  "names": []
-}

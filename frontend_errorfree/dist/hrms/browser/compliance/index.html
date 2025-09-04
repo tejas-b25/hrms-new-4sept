@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>HRMS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- In index.html head section -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/themes/lara-light-blue/theme.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/primeng.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeicons@8.0.0/primeicons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+*[_ngcontent-ng-c3273821483] {
+  box-sizing: border-box;
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+body[_ngcontent-ng-c3273821483] {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+.form-container[_ngcontent-ng-c3273821483] {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+h2[_ngcontent-ng-c3273821483] {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+.form-sections[_ngcontent-ng-c3273821483] {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+.form-section[_ngcontent-ng-c3273821483] {
+  flex: 1;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.form-section[_ngcontent-ng-c3273821483]   h3[_ngcontent-ng-c3273821483] {
+  margin-top: 0;
+  color: #2d3748;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 18px;
+}
+.form-group[_ngcontent-ng-c3273821483] {
+  margin-bottom: 18px;
+}
+label[_ngcontent-ng-c3273821483] {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 14px;
+}
+input[type=text][_ngcontent-ng-c3273821483], input[type=date][_ngcontent-ng-c3273821483], select[_ngcontent-ng-c3273821483] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  transition: border-color 0.3s;
+}
+input[type=text][_ngcontent-ng-c3273821483]:focus, input[type=date][_ngcontent-ng-c3273821483]:focus, select[_ngcontent-ng-c3273821483]:focus {
+  border-color: #4299e1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+input[type=text][_ngcontent-ng-c3273821483]::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+.action-button[_ngcontent-ng-c3273821483] {
+  background-color: #4299e1;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.action-button[_ngcontent-ng-c3273821483]:hover {
+  background-color: #4299e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.top-button-wrapper[_ngcontent-ng-c3273821483] {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.register-button-wrapper[_ngcontent-ng-c3273821483] {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .form-sections[_ngcontent-ng-c3273821483] {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/*# sourceMappingURL=compliance.component.css.map */</style><style ng-app-id="ng">@layer primeng{.p-dialog-mask{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;pointer-events:none}.p-dialog-mask.p-component-overlay{pointer-events:auto}.p-dialog{display:flex;flex-direction:column;pointer-events:auto;max-height:90%;transform:scale(1);position:relative}.p-dialog-content{overflow-y:auto;flex-grow:1}.p-dialog-header{display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.p-dialog-draggable .p-dialog-header{cursor:move}.p-dialog-footer{flex-shrink:0}.p-dialog .p-dialog-header-icons{display:flex;align-items:center}.p-dialog .p-dialog-header-icon{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-fluid .p-dialog-footer .p-button{width:auto}.p-dialog-top .p-dialog,.p-dialog-bottom .p-dialog,.p-dialog-left .p-dialog,.p-dialog-right .p-dialog,.p-dialog-top-left .p-dialog,.p-dialog-top-right .p-dialog,.p-dialog-bottom-left .p-dialog,.p-dialog-bottom-right .p-dialog{margin:.75rem;transform:translateZ(0)}.p-dialog-maximized{-webkit-transition:none;transition:none;transform:none;width:100vw!important;height:100vh!important;top:0!important;left:0!important;max-height:100%;height:100%}.p-dialog-maximized .p-dialog-content{flex-grow:1}.p-dialog-left{justify-content:flex-start}.p-dialog-right{justify-content:flex-end}.p-dialog-top{align-items:flex-start}.p-dialog-top-left{justify-content:flex-start;align-items:flex-start}.p-dialog-top-right{justify-content:flex-end;align-items:flex-start}.p-dialog-bottom{align-items:flex-end}.p-dialog-bottom-left{justify-content:flex-start;align-items:flex-end}.p-dialog-bottom-right{justify-content:flex-end;align-items:flex-end}.p-dialog .p-resizable-handle{position:absolute;font-size:.1px;display:block;cursor:se-resize;width:12px;height:12px;right:1px;bottom:1px}.p-confirm-dialog .p-dialog-content{display:flex;align-items:center}}
+</style></head>
+<body class="mat-typography"><!--nghm-->
+  <app-root _nghost-ng-c3983809038="" ng-version="17.3.12" ngh="2" ng-server-context="ssg"><router-outlet _ngcontent-ng-c3983809038=""></router-outlet><app-compliance _nghost-ng-c3273821483="" class="ng-star-inserted" ngh="1"><p-confirmdialog _ngcontent-ng-c3273821483="" class="p-element ng-tns-c3962434685-0 ng-star-inserted" ngh="0"><!--bindings={}--></p-confirmdialog><div _ngcontent-ng-c3273821483="" class="top-button-wrapper"><button _ngcontent-ng-c3273821483="" class="action-button">×</button></div><div _ngcontent-ng-c3273821483="" class="container"><h3 _ngcontent-ng-c3273821483="">Add Compliance</h3><form _ngcontent-ng-c3273821483="" novalidate="" ng-reflect-form="[object Object]" class="ng-untouched ng-pristine ng-invalid"><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Name</label><input _ngcontent-ng-c3273821483="" formcontrolname="name" placeholder="Enter compliance name" maxlength="25" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-maxlength="25" ng-reflect-name="name" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Description</label><textarea _ngcontent-ng-c3273821483="" formcontrolname="description" placeholder="Enter compliance description" maxlength="100" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-maxlength="100" ng-reflect-name="description"></textarea><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Type</label><select _ngcontent-ng-c3273821483="" formcontrolname="type" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="type"><option _ngcontent-ng-c3273821483="" value="" disabled="" ng-reflect-value="">Select type</option><option _ngcontent-ng-c3273821483="" value="STATUTORY" ng-reflect-value="STATUTORY" class="ng-star-inserted">STATUTORY</option><option _ngcontent-ng-c3273821483="" value="INTERNAL" ng-reflect-value="INTERNAL" class="ng-star-inserted">INTERNAL</option><option _ngcontent-ng-c3273821483="" value="REGULATORY" ng-reflect-value="REGULATORY" class="ng-star-inserted">REGULATORY</option><!--bindings={
+  "ng-reflect-ng-for-of": "STATUTORY,INTERNAL,REGULATORY"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Frequency</label><select _ngcontent-ng-c3273821483="" formcontrolname="frequency" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="frequency"><option _ngcontent-ng-c3273821483="" value="" disabled="" ng-reflect-value="">Select frequency</option><option _ngcontent-ng-c3273821483="" value="QUARTERLY" ng-reflect-value="QUARTERLY" class="ng-star-inserted">QUARTERLY</option><option _ngcontent-ng-c3273821483="" value="MONTHLY" ng-reflect-value="MONTHLY" class="ng-star-inserted">MONTHLY</option><option _ngcontent-ng-c3273821483="" value="YEARLY" ng-reflect-value="YEARLY" class="ng-star-inserted">YEARLY</option><!--bindings={
+  "ng-reflect-ng-for-of": "QUARTERLY,MONTHLY,YEARLY"
+}--></select><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Due Date</label><input _ngcontent-ng-c3273821483="" type="date" formcontrolname="dueDate" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-name="dueDate" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-group"><label _ngcontent-ng-c3273821483="">Penalty</label><input _ngcontent-ng-c3273821483="" formcontrolname="penalty" placeholder="Enter penalty amount" maxlength="5" class="form-control ng-untouched ng-pristine ng-invalid" ng-reflect-maxlength="5" ng-reflect-name="penalty" value=""><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-ng-c3273821483="" class="form-check"><input _ngcontent-ng-c3273821483="" type="checkbox" formcontrolname="documentRequired" class="form-check-input ng-untouched ng-pristine ng-valid" ng-reflect-name="documentRequired"><label _ngcontent-ng-c3273821483="" class="form-check-label">Document Required</label></div><div _ngcontent-ng-c3273821483="" class="form-check"><input _ngcontent-ng-c3273821483="" type="checkbox" formcontrolname="isActive" class="form-check-input ng-untouched ng-pristine ng-valid" ng-reflect-name="isActive" checked=""><label _ngcontent-ng-c3273821483="" class="form-check-label">Is Active</label></div><button _ngcontent-ng-c3273821483="" type="submit" class="btn btn-primary mt-2"> Create </button><button _ngcontent-ng-c3273821483="" type="button" class="btn btn-secondary mt-2 ms-2">Reset</button></form><hr _ngcontent-ng-c3273821483=""><h4 _ngcontent-ng-c3273821483="">All Compliances</h4><table _ngcontent-ng-c3273821483="" class="table table-striped mt-3"><thead _ngcontent-ng-c3273821483=""><tr _ngcontent-ng-c3273821483=""><th _ngcontent-ng-c3273821483="">Name</th><th _ngcontent-ng-c3273821483="">Type</th><th _ngcontent-ng-c3273821483="">Frequency</th><th _ngcontent-ng-c3273821483="">Due Date</th><th _ngcontent-ng-c3273821483="">Penalty</th><th _ngcontent-ng-c3273821483="">Document Required</th><th _ngcontent-ng-c3273821483="">Status</th><th _ngcontent-ng-c3273821483="">Actions</th></tr></thead><tbody _ngcontent-ng-c3273821483=""><!--bindings={
+  "ng-reflect-ng-for-of": ""
+}--></tbody></table></div></app-compliance><!--container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-root>
+  
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"0":"t5"},"c":{"0":[]}},{"t":{"12":"t6","17":"t7","24":"t8","25":"t9","32":"t10","33":"t11","38":"t12","43":"t13","79":"t14"},"c":{"12":[],"17":[],"24":[{"i":"t8","r":1,"x":3}],"25":[],"32":[{"i":"t10","r":1,"x":3}],"33":[],"38":[],"43":[],"79":[]}},{"t":{"0":"t0","1":"t4"},"c":{"0":[{"i":"t0","r":3,"c":{"0":[{"i":"c3273821483","r":1}]}}],"1":[]}}]}</script></body></html>

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/components/employees-dashboard/employees-dashboard.component.css"],
-  "sourcesContent": [".metric-card {\r\n  border-left: 5px solid #4e73df;\r\n  padding: 10px;\r\n  transition: transform 0.2s ease;\r\n  border-radius: 0.5rem;\r\n}\r\n\r\n.metric-card:hover {\r\n  transform: scale(1.02);\r\n}\r\n\r\n.metric-title {\r\n  font-weight: 600;\r\n  font-size: 1.1rem;\r\n  margin-bottom: 0.5rem;\r\n  color: #4e73df;\r\n}\r\n\r\n.metric-value {\r\n  font-size: 1.4rem;\r\n  font-weight: bold;\r\n  color: #1cc88a;\r\n}\r\n\r\n.badge-success {\r\n  background-color: #1cc88a;\r\n  color: white;\r\n}\r\n\r\n.badge-warning {\r\n  background-color: #f6c23e;\r\n  color: white;\r\n}\r\n\r\n.badge-danger {\r\n  background-color: #e74a3b;\r\n  color: white;\r\n}\r\n\r\n/* Hover dropdown styling */\r\n.profile-dropdown .dropdown:hover .dropdown-menu {\r\n  display: block;\r\n  margin-top: 0;\r\n}\r\n\r\n.dropdown-menu {\r\n  min-width: 150px;\r\n  font-size: 0.9rem;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,eAAa,IAAI,MAAM;AACvB,WAAS;AACT,cAAY,UAAU,KAAK;AAC3B,iBAAe;AACjB;AAEA,CAPC,WAOW;AACV,aAAW,MAAM;AACnB;AAEA,CAAC;AACC,eAAa;AACb,aAAW;AACX,iBAAe;AACf,SAAO;AACT;AAEA,CAAC;AACC,aAAW;AACX,eAAa;AACb,SAAO;AACT;AAEA,CAAC;AACC,oBAAkB;AAClB,SAAO;AACT;AAEA,CAAC;AACC,oBAAkB;AAClB,SAAO;AACT;AAEA,CAAC;AACC,oBAAkB;AAClB,SAAO;AACT;AAGA,CAAC,iBAAiB,CAAC,QAAQ,OAAO,CAAC;AACjC,WAAS;AACT,cAAY;AACd;AAEA,CALmC;AAMjC,aAAW;AACX,aAAW;AACb;",
-  "names": []
-}

@@ -1,0 +1,40 @@
+<div class="attendance-container">
+  <h2>Employee Attendance List</h2>
+
+  <div *ngIf="loading" class="loading">Loading attendance data...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <table *ngIf="!loading && attendanceList.length > 0" class="attendance-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Clock In</th>
+        <th>Clock Out</th>
+        <th>Status</th>
+        <th>Work From</th>
+        <th>Mode</th>
+        <th>Total Hours</th>
+        <th>Regularization</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of attendanceList">
+        <td>{{ record.date }}</td>
+        <td>{{ record.clockInTime }}</td>
+        <td>{{ record.clockOutTime }}</td>
+        <td>{{ record.status }}</td>
+        <td>{{ record.workFrom }}</td>
+        <td>{{ record.mode }}</td>
+        <td>{{ record.totalHoursWorked }}</td>
+        <td>
+          {{ record.regularizationStatus }} -
+          {{ record.regularizationReason }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && attendanceList.length === 0" class="no-data">
+    No attendance records found.
+  </div>
+</div>

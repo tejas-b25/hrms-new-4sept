@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/components/upcoming-events/upcoming-events.component.css"],
+  "sourcesContent": [".list-group-item {\r\n  border-left: none;\r\n  border-right: none;\r\n}\r\n\r\n.list-group-item:first-child {\r\n  border-top: none;\r\n}\r\n\r\n.list-group-item:last-child {\r\n  border-bottom: none;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,eAAa;AACb,gBAAc;AAChB;AAEA,CALC,eAKe;AACd,cAAY;AACd;AAEA,CATC,eASe;AACd,iBAAe;AACjB;",
+  "names": []
+}

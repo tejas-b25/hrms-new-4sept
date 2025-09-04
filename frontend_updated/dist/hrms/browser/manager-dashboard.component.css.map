@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/components/manager-dashboard/manager-dashboard.component.css"],
-  "sourcesContent": [".metric-card {\r\n  padding: 20px;\r\n  border-radius: 12px;\r\n  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);\r\n  color: #fff;\r\n  position: relative;\r\n}\r\n.metric-title {\r\n  font-size: 1rem;\r\n  margin-bottom: 0.5rem;\r\n}\r\n.metric-value {\r\n  font-size: 1.8rem;\r\n  font-weight: bold;\r\n}\r\n.metric-icon {\r\n  position: absolute;\r\n  top: 10px;\r\n  right: 15px;\r\n  font-size: 1.5rem;\r\n  opacity: 0.3;\r\n}\r\n.primary-metric { background-color: #4e73df; }\r\n.success-metric { background-color: #1cc88a; }\r\n.info-metric { background-color: #36b9cc; }\r\n.warning-metric { background-color: #f6c23e; }\r\n\r\n/* Hover dropdown for profile */\r\n.profile-dropdown .dropdown:hover .dropdown-menu {\r\n  display: block;\r\n  margin-top: 0;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,WAAS;AACT,iBAAe;AACf,cAAY,EAAE,EAAE,IAAI,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE;AAClC,SAAO;AACP,YAAU;AACZ;AACA,CAAC;AACC,aAAW;AACX,iBAAe;AACjB;AACA,CAAC;AACC,aAAW;AACX,eAAa;AACf;AACA,CAAC;AACC,YAAU;AACV,OAAK;AACL,SAAO;AACP,aAAW;AACX,WAAS;AACX;AACA,CAAC;AAAiB,oBAAkB;AAAS;AAC7C,CAAC;AAAiB,oBAAkB;AAAS;AAC7C,CAAC;AAAc,oBAAkB;AAAS;AAC1C,CAAC;AAAiB,oBAAkB;AAAS;AAG7C,CAAC,iBAAiB,CAAC,QAAQ,OAAO,CAAC;AACjC,WAAS;AACT,cAAY;AACd;",
-  "names": []
-}

@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>HRMS</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- In index.html head section -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/themes/lara-light-blue/theme.css" rel="stylesheet">
+<link href="https://unpkg.com/primeng@17.4.1/resources/primeng.min.css" rel="stylesheet">
+<link href="https://unpkg.com/primeicons@8.0.0/primeicons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+
+.metric-card[_ngcontent-ng-c1526364638] {
+  border-left: 5px solid #4e73df;
+  padding: 10px;
+  transition: transform 0.2s ease;
+  border-radius: 0.5rem;
+}
+.metric-card[_ngcontent-ng-c1526364638]:hover {
+  transform: scale(1.02);
+}
+.metric-title[_ngcontent-ng-c1526364638] {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #4e73df;
+}
+.metric-value[_ngcontent-ng-c1526364638] {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1cc88a;
+}
+.badge-success[_ngcontent-ng-c1526364638] {
+  background-color: #1cc88a;
+  color: white;
+}
+.badge-warning[_ngcontent-ng-c1526364638] {
+  background-color: #f6c23e;
+  color: white;
+}
+.badge-danger[_ngcontent-ng-c1526364638] {
+  background-color: #e74a3b;
+  color: white;
+}
+.profile-dropdown[_ngcontent-ng-c1526364638]   .dropdown[_ngcontent-ng-c1526364638]:hover   .dropdown-menu[_ngcontent-ng-c1526364638] {
+  display: block;
+  margin-top: 0;
+}
+.dropdown-menu[_ngcontent-ng-c1526364638] {
+  min-width: 150px;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=employees-dashboard.component.css.map */</style><style ng-app-id="ng">
+
+[_nghost-ng-c832110406] {
+  display: block;
+  height: 100%;
+}
+.sidebar[_ngcontent-ng-c832110406] {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  transition: all 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.sidebar.collapsed[_ngcontent-ng-c832110406] {
+  width: 60px;
+}
+.sidebar.collapsed[_ngcontent-ng-c832110406]   .nav-text[_ngcontent-ng-c832110406], .sidebar.collapsed[_ngcontent-ng-c832110406]   .sidebar-header[_ngcontent-ng-c832110406]   h2[_ngcontent-ng-c832110406] {
+  display: none;
+}
+.sidebar.collapsed[_ngcontent-ng-c832110406]   .sub-menu[_ngcontent-ng-c832110406] {
+  display: none !important;
+}
+.sidebar-header[_ngcontent-ng-c832110406] {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar-header[_ngcontent-ng-c832110406]   h2[_ngcontent-ng-c832110406] {
+  margin: 0;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.toggle-btn[_ngcontent-ng-c832110406] {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+.sidebar-nav[_ngcontent-ng-c832110406] {
+  padding: 10px 0;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   ul[_ngcontent-ng-c832110406] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406] {
+  position: relative;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406]   a[_ngcontent-ng-c832110406] {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406]   a[_ngcontent-ng-c832110406]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406]   a[_ngcontent-ng-c832110406]   i[_ngcontent-ng-c832110406] {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li.active[_ngcontent-ng-c832110406]   a[_ngcontent-ng-c832110406] {
+  background-color: #3498db;
+}
+.sub-menu[_ngcontent-ng-c832110406] {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+}
+.sidebar-nav[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406]:hover    > .sub-menu[_ngcontent-ng-c832110406] {
+  display: block;
+}
+.sub-menu[_ngcontent-ng-c832110406]   li[_ngcontent-ng-c832110406]   a[_ngcontent-ng-c832110406] {
+  padding: 10px 20px 10px 30px;
+  font-size: 0.9rem;
+}
+/*# sourceMappingURL=employee-sidebar.component.css.map */</style><style ng-app-id="ng">@layer primeng{.p-toast{position:fixed;width:25rem}.p-toast-message{overflow:hidden}.p-toast-message-content{display:flex;align-items:flex-start}.p-toast-message-text{flex:1 1 auto}.p-toast-top-right{top:20px;right:20px}.p-toast-top-left{top:20px;left:20px}.p-toast-bottom-left{bottom:20px;left:20px}.p-toast-bottom-right{bottom:20px;right:20px}.p-toast-top-center{top:20px;left:50%;transform:translate(-50%)}.p-toast-bottom-center{bottom:20px;left:50%;transform:translate(-50%)}.p-toast-center{left:50%;top:50%;min-width:20vw;transform:translate(-50%,-50%)}.p-toast-icon-close{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;flex:none}.p-toast-icon-close.p-link{cursor:pointer}}
+</style></head>
+<body class="mat-typography"><!--nghm-->
+  <app-root _nghost-ng-c3983809038="" ng-version="17.3.12" ngh="3" ng-server-context="ssg"><router-outlet _ngcontent-ng-c3983809038=""></router-outlet><app-employees-dashboard _nghost-ng-c1526364638="" class="ng-star-inserted" ngh="2"><div _ngcontent-ng-c1526364638="" class="container-fluid"><app-employee-sidebar _ngcontent-ng-c1526364638="" _nghost-ng-c832110406="" ngh="0"><div _ngcontent-ng-c832110406="" class="sidebar"><div _ngcontent-ng-c832110406="" class="sidebar-header"><h2 _ngcontent-ng-c832110406="">HRMS Portal</h2><button _ngcontent-ng-c832110406="" class="toggle-btn"><i _ngcontent-ng-c832110406="" class="fas fa-bars"></i></button></div><nav _ngcontent-ng-c832110406="" class="sidebar-nav"><ul _ngcontent-ng-c832110406=""><li _ngcontent-ng-c832110406="" class="active"><a _ngcontent-ng-c832110406="" routerlink="/dashboard" ng-reflect-router-link="/dashboard" href="/dashboard"><i _ngcontent-ng-c832110406="" class="fas fa-tachometer-alt"></i><span _ngcontent-ng-c832110406="" class="nav-text">Dashboard</span></a></li><li _ngcontent-ng-c832110406=""><a _ngcontent-ng-c832110406="" routerlink="/department" ng-reflect-router-link="/department" href="/department"><i _ngcontent-ng-c832110406="" class="fas fa-building"></i><span _ngcontent-ng-c832110406="" class="nav-text">Department</span></a></li><li _ngcontent-ng-c832110406=""><a _ngcontent-ng-c832110406="" routerlink="/payroll" ng-reflect-router-link="/payroll" href="/payroll"><i _ngcontent-ng-c832110406="" class="fas fa-money-bill-wave"></i><span _ngcontent-ng-c832110406="" class="nav-text">Payroll</span></a><ul _ngcontent-ng-c832110406="" class="sub-menu"></ul></li><li _ngcontent-ng-c832110406=""><a _ngcontent-ng-c832110406="" routerlink="/attendance" ng-reflect-router-link="/attendance" href="/attendance"><i _ngcontent-ng-c832110406="" class="fas fa-calendar-check"></i><span _ngcontent-ng-c832110406="" class="nav-text">Attendance</span></a></li><li _ngcontent-ng-c832110406=""><ul _ngcontent-ng-c832110406="" class="sub-menu"></ul></li></ul></nav></div></app-employee-sidebar><div _ngcontent-ng-c1526364638="" class="d-flex justify-content-end align-items-center pe-4 pt-3 position-relative profile-dropdown"><div _ngcontent-ng-c1526364638="" class="dropdown"><a _ngcontent-ng-c1526364638="" href="#" class="d-flex align-items-center text-decoration-none"><span _ngcontent-ng-c1526364638="" class="fw-bold text-capitalize me-2"><!--ngetn--></span><i _ngcontent-ng-c1526364638="" class="fas fa-user-circle fa-lg text-primary"></i></a><ul _ngcontent-ng-c1526364638="" class="dropdown-menu dropdown-menu-end"><li _ngcontent-ng-c1526364638=""><a _ngcontent-ng-c1526364638="" href="#" class="dropdown-item text-danger">Logout</a></li></ul></div></div><div _ngcontent-ng-c1526364638="" class="d-sm-flex align-items-center justify-content-between mb-4 mt-3"><h1 _ngcontent-ng-c1526364638="" class="h3 mb-0 text-gray-800">Employee Dashboard</h1></div><div _ngcontent-ng-c1526364638="" class="container mb-4"><h2 _ngcontent-ng-c1526364638="">Attendance Management</h2><form _ngcontent-ng-c1526364638="" novalidate="" class="mb-3"><label _ngcontent-ng-c1526364638="">Working From: <select _ngcontent-ng-c1526364638="" formcontrolname="workFrom" ng-reflect-name="workFrom"><option _ngcontent-ng-c1526364638="" value="" ng-reflect-value="">Select</option><option _ngcontent-ng-c1526364638="" value="OFFICE" ng-reflect-value="OFFICE">OFFICE</option><option _ngcontent-ng-c1526364638="" value="REMOTE" ng-reflect-value="REMOTE">REMOTE</option></select></label><br _ngcontent-ng-c1526364638=""><br _ngcontent-ng-c1526364638=""><label _ngcontent-ng-c1526364638="">Mode: <select _ngcontent-ng-c1526364638="" formcontrolname="mode" ng-reflect-name="mode"><option _ngcontent-ng-c1526364638="" value="" ng-reflect-value="">Select</option><option _ngcontent-ng-c1526364638="" value="WEB" ng-reflect-value="WEB">WEB</option><option _ngcontent-ng-c1526364638="" value="MOBILE" ng-reflect-value="MOBILE">MOBILE</option><option _ngcontent-ng-c1526364638="" value="BIOMETRIC" ng-reflect-value="BIOMETRIC">BIOMETRIC</option></select></label><br _ngcontent-ng-c1526364638=""><br _ngcontent-ng-c1526364638=""><label _ngcontent-ng-c1526364638="">Location: <input _ngcontent-ng-c1526364638="" type="text" formcontrolname="location" placeholder="Enter your city" autocomplete="off" ng-reflect-name="location"></label><br _ngcontent-ng-c1526364638=""><br _ngcontent-ng-c1526364638=""><button _ngcontent-ng-c1526364638="" type="submit">Clock In</button></form><form _ngcontent-ng-c1526364638="" novalidate="" class="mb-3"><button _ngcontent-ng-c1526364638="" type="submit">Clock Out</button></form><hr _ngcontent-ng-c1526364638=""><form _ngcontent-ng-c1526364638="" novalidate=""><h3 _ngcontent-ng-c1526364638="">Regularize Attendance</h3><label _ngcontent-ng-c1526364638="">Date: <input _ngcontent-ng-c1526364638="" type="date" formcontrolname="date" ng-reflect-name="date"></label><br _ngcontent-ng-c1526364638=""><br _ngcontent-ng-c1526364638=""><label _ngcontent-ng-c1526364638="">Reason: <input _ngcontent-ng-c1526364638="" type="text" formcontrolname="reason" ng-reflect-name="reason"></label><br _ngcontent-ng-c1526364638=""><br _ngcontent-ng-c1526364638=""><button _ngcontent-ng-c1526364638="" type="submit">Request Regularization</button></form><p-toast _ngcontent-ng-c1526364638="" class="p-element ng-tns-c1067615279-0 ng-star-inserted" ngh="1"><div class="p-toast p-component ng-tns-c1067615279-0"><!--container--></div></p-toast></div><div _ngcontent-ng-c1526364638="" class="row"><!--container--><div _ngcontent-ng-c1526364638="" class="col-md-3 mb-4"><div _ngcontent-ng-c1526364638="" class="card shadow metric-card"><div _ngcontent-ng-c1526364638="" class="card-body"><h5 _ngcontent-ng-c1526364638="" class="metric-title">Attendance</h5><div _ngcontent-ng-c1526364638=""><!--ngetn--></div><div _ngcontent-ng-c1526364638=""><!--ngetn--></div><div _ngcontent-ng-c1526364638=""><!--ngetn--></div></div></div></div><div _ngcontent-ng-c1526364638="" class="col-md-3 mb-4"><div _ngcontent-ng-c1526364638="" class="card shadow metric-card"><div _ngcontent-ng-c1526364638="" class="card-body"><h5 _ngcontent-ng-c1526364638="" class="metric-title">Next Payroll</h5><div _ngcontent-ng-c1526364638="" class="metric-value"><!--ngetn--></div></div></div></div><div _ngcontent-ng-c1526364638="" class="col-md-3 mb-4"><div _ngcontent-ng-c1526364638="" class="card shadow metric-card"><div _ngcontent-ng-c1526364638="" class="card-body"><h5 _ngcontent-ng-c1526364638="" class="metric-title">Upcoming Holidays</h5><ul _ngcontent-ng-c1526364638="" class="list-unstyled small"><!--container--></ul></div></div></div></div><div _ngcontent-ng-c1526364638="" class="card shadow mb-4"><div _ngcontent-ng-c1526364638="" class="card-header py-3"><h6 _ngcontent-ng-c1526364638="" class="m-0 font-weight-bold text-primary">Leave History</h6></div><div _ngcontent-ng-c1526364638="" class="card-body table-responsive"><table _ngcontent-ng-c1526364638="" class="table table-bordered"><thead _ngcontent-ng-c1526364638=""><tr _ngcontent-ng-c1526364638=""><th _ngcontent-ng-c1526364638="">Leave Type</th><th _ngcontent-ng-c1526364638="">From</th><th _ngcontent-ng-c1526364638="">To</th><th _ngcontent-ng-c1526364638="">Status</th></tr></thead><tbody _ngcontent-ng-c1526364638=""><!--container--></tbody></table></div></div></div></app-employees-dashboard><!--container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></app-root>
+  
+<script src="polyfills.js" type="module"></script><script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"2":"t2"},"c":{"2":[]}},{"t":{"71":"t57","97":"t58","115":"t59"},"c":{"71":[],"97":[],"115":[]}},{"t":{"0":"t0","1":"t3"},"c":{"0":[{"i":"t0","r":3,"c":{"0":[{"i":"c1526364638","r":1}]}}],"1":[]}}]}</script></body></html>

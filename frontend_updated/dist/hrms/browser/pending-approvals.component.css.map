@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/components/pending-approvals/pending-approvals.component.css"],
-  "sourcesContent": [".badge {\r\n  font-weight: 500;\r\n  padding: 0.35em 0.65em;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,eAAa;AACb,WAAS,OAAO;AAClB;",
-  "names": []
-}
